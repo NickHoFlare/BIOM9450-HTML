@@ -2,9 +2,13 @@
 /* CSS Document */
 
 body {
-    background-image: url('./assets/background3.jpg');
-	margin-left: 200px;
-	margin-right: 200px;
+    background-image: url('./assets/background1.jpg');
+    background-color: rgba(249,249,249,1);
+    background-repeat: no-repeat;
+	margin-left: 320px;
+	margin-right: 320px;
+	margin-top: 150px;
+	margin-bottom: 50px;
 	font-family: Calibri;
 }
 
@@ -16,11 +20,16 @@ li a {
 table,th,td
 {
 	border:2px solid black;
+	margin-top:50px;
 	padding:15px;
 }
 
+.intro-text {
+	padding-bottom: 50px;
+}
+
 .logo-header {
-	font-size: 80px;
+	font-size: 65px;
 	vertical-align: text-top;
 }
 
@@ -37,6 +46,7 @@ table,th,td
 	width: 1000px;
 }
 
-.talk-name {
-	
+.contact-info, .standards-explanation {
+	margin-top:50px;
+	padding-bottom: 50px;
 }
