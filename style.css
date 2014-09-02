@@ -19,7 +19,6 @@ li a {
 
 table,th,td
 {
-	border:2px solid black;
 	margin-top:50px;
 	padding:15px;
 }
@@ -38,12 +37,17 @@ table,th,td
 }
 
 .abstract-call {
-	font-size: 120px;
+	font-size: 100px;
 	color: red;
 }
 
 .program-table {
 	width: 1000px;
+	border:2px solid black;
+}
+
+.form-table {
+	margin-top:0px;
 }
 
 .contact-info, .standards-explanation {
