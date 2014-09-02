@@ -59,8 +59,11 @@
 		}
 
 		function validInfo() {
-			if (!validFirstName() && validLastName() && validDOB() && validEmail()) {
+			if (!(validFirstName() && validLastName() && validDOB() && validEmail())) {
 				alert("Please fix any errors in your provided information before we proceed with registration.");
+				return false;
+			} else {
+				return true;
 			}
 		}
 
@@ -91,7 +94,7 @@
 	</div>
 	<div class="registration-form">
 		<h2>RSVP for AAZS today!</h2>
-		<form id="registrationForm" onSubmit="return validInfo()" method="GET" action="http://www.google.com">
+		<form id="registrationForm" onSubmit="return validInfo()" method="GET" action="./registered.html">
     		<table class="form-table">
 		        <tr>
 		            <td>Given name:</td>
@@ -114,7 +117,7 @@
 		            <td id="emailError"></td>
 		        </tr>
 		        <tr>
-		        	<td><input type="submit" value="Submit" onClick="validInfo()"/></td>
+		        	<td><input type="submit" id="submit" value="Register now!"/></td>
 		        </tr>
 		    </table>
     	</form>

@@ -4,67 +4,6 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Anti-zombie Symposium</title>
 	<link rel="stylesheet" type="text/css" href="style.css" />
-	<script type="text/JavaScript">
-		// Function checks if text typed in a name field is in a valid name syntax
-		function  validFirstName() {
-			var firstName = document.getElementById('firstName');			
-			var regex = /^[a-zA-Z][a-zA-Z \']*$/;
-			if (!regex.test(firstName.value)) {
-				document.getElementById('firstNameError').innerHTML = 'The name entered is not valid. Do not use characters other than alphabets, single whitespace or apostrophes.';
-				document.getElementById('firstNameError').style.color = 'red';
-				return false;
-			} else {
-				document.getElementById('firstNameError').innerHTML = '';
-				return true;
-			}
-		}
-
-		function  validLastName() {
-			var lastName = document.getElementById('lastName');
-			var regex = /^[a-zA-Z][a-zA-Z \']*$/;
-			if (!regex.test(lastName.value)) {
-				document.getElementById('lastNameError').innerHTML = 'The name entered is not valid. Do not use characters other than alphabets, single whitespace or apostrophes.';
-				document.getElementById('lastNameError').style.color = 'red';
-				return false;
-			} else {
-				document.getElementById('lastNameError').innerHTML = '';
-				return true;
-			} 
-		}
-
-		function validDOB() {
-			var dateOfBirth = document.getElementById('dateOfBirth');
-			var regex = /^(0[1-9]|[12][0-9]|3[01])\/[01][0-9]\/19[0-9][0-9]$/;
-			if (!regex.test(dateOfBirth.value)) {
-				document.getElementById('dobError').innerHTML = 'The date of birth entered is not valid. Please enter a valid date in the format dd/mm/yyyy.';
-				document.getElementById('dobError').style.color = 'red';
-				return false;
-			} else {
-				document.getElementById('dobError').innerHTML = '';
-				return true;
-			} 
-		}
-
-		function validEmail() {
-			var email = document.getElementById('emailAddress');
-			var regex = /^[a-zA-Z0-9\.\_\-]+\@[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,4}$/;
-			if (!regex.test(email.value)) {
-				document.getElementById('emailError').innerHTML = 'The Email Address entered is not valid. Please enter a valid email address.';
-				document.getElementById('emailError').style.color = 'red';
-				return false;
-			} else {
-				document.getElementById('emailError').innerHTML = '';
-				return true;
-			} 
-		}
-
-		function validInfo() {
-			if (!validFirstName() && validLastName() && validDOB() && validEmail()) {
-				alert("Please fix any errors in your provided information before we proceed with registration.");
-			}
-		}
-
-	</script>
 </head>
 
 <body>
@@ -81,43 +20,9 @@
         </div>
 
 	</header>
-	<div class="abstract-call">
-		Call for Abstracts!
-	</div>
 	<div class="intro-text">
-	    <h2>Welcome to the official page of the emergency Australian Anti-Zombie Symposium (AAZS).</h2>
-		<p>The AAZS 2014 Committee urges authors to submit abstracts for presentation within the topic of finding solutions to end or at least control the Zombie threat. Submissions are sought for symposia, oral and poster presentations and can be made via military helicopter or messenger pigeon to the safe zone, at <strong>UNSW, Sydney</strong>.</p>
-		<p>Please note the deadline for abstract submission is <strong>9am 1st September 2014</strong> Australian Eastern Standard Time (AEST). This is three hours before our generals make the decision to launch the nukes as a final act of desperation.</p>
-	</div>
-	<div class="registration-form">
-		<h2>RSVP for AAZS today!</h2>
-		<form id="registrationForm" onSubmit="return validInfo()" method="GET" action="http://www.google.com">
-    		<table class="form-table">
-		        <tr>
-		            <td>Given name:</td>
-		            <td><input type="text" id="firstName" placeholder="Your First Name" onChange="validFirstName()"></td>
-		            <td id="firstNameError"></td>
-		        </tr>
-		        <tr>
-		            <td>Family name:</td>
-		            <td><input type="text" id="lastName" placeholder="Your Family Name" onChange="validLastName()"></td>
-		            <td id="lastNameError"></td>
-		        </tr>
-		        <tr>
-		            <td>Date of Birth:</td>
-		            <td><input type="text" id="dateOfBirth" placeholder="dd/mm/yyyy" onChange="validDOB()"></td>
-		            <td id="dobError"></td>
-		        </tr>
-		        <tr>
-		            <td>Email Address:</td>
-		            <td><input type="text" id="emailAddress" placeholder="Your Email Address" onChange="validEmail()"></td>
-		            <td id="emailError"></td>
-		        </tr>
-		        <tr>
-		        	<td><input type="submit" value="Submit" onClick="validInfo()"/></td>
-		        </tr>
-		    </table>
-    	</form>
+	    <h1>Registration Successful!</h1>
+		<p>You will hear from us shortly.</p>
 	</div>
 </body>
 <hr>
