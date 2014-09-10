@@ -32,7 +32,6 @@
 
        		if (preg_match($johnnyRegex, $firstName) && preg_match($noShowRegex, $lastName)) {
        			echo "<h1>Registration Unsuccessful - No-show policy</h1>
-					<p>You will hear from us shortly.</p>
 					<h2>Details: </h2>";
 				echo "<p>Dear Mr. Noshow, last year you didn't turn up to present your talk. You cannot register this year!</p>";
        		} else {
