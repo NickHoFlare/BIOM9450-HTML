@@ -19,7 +19,6 @@
                 <li><a href="./standards.html">Codes and standards</a></li>
             </ul>
         </div>
-
 	</header>
 	<div class="abstract-call">
 		Call for Abstracts!
@@ -31,26 +30,26 @@
 	</div>
 	<div class="registration-form">
 		<h2>RSVP for AAZS today!</h2>
-		<form id="registrationForm" onSubmit="return validInfo()" method="GET" action="./registered.html">
+		<form id="registrationForm" onSubmit="return validInfo()" method="POST" action="./registered.php">
     		<table class="form-table">
 		        <tr>
 		            <td>Given name:</td>
-		            <td><input type="text" id="firstName" placeholder="Your First Name" onChange="validFirstName()"></td>
+		            <td><input type="text" id="firstName" name="firstName" placeholder="Your First Name" onChange="validFirstName()"></td>
 		            <td id="firstNameError"></td>
 		        </tr>
 		        <tr>
 		            <td>Family name:</td>
-		            <td><input type="text" id="lastName" placeholder="Your Family Name" onChange="validLastName()"></td>
+		            <td><input type="text" id="lastName" name="lastName" placeholder="Your Family Name" onChange="validLastName()"></td>
 		            <td id="lastNameError"></td>
 		        </tr>
 		        <tr>
 		            <td>Date of Birth:</td>
-		            <td><input type="text" id="dateOfBirth" placeholder="dd/mm/yyyy" onChange="validDOB()"></td>
+		            <td><input type="text" id="dateOfBirth" name="dateOfBirth" placeholder="dd/mm/yyyy" onChange="validDOB()"></td>
 		            <td id="dobError"></td>
 		        </tr>
 		        <tr>
 		            <td>Email Address:</td>
-		            <td><input type="text" id="emailAddress" placeholder="Your Email Address" onChange="validEmail()"></td>
+		            <td><input type="text" id="emailAddress" name="emailAddress" placeholder="Your Email Address" onChange="validEmail()"></td>
 		            <td id="emailError"></td>
 		        </tr>
 		        <tr>
