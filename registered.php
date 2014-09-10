@@ -22,14 +22,19 @@
 	<div class="intro-text">
 	    
 		<?php
+			// Capture the contents of filled fields in the application form
 			$firstName = $_POST["firstName"];
        		$lastName = $_POST["lastName"];
        		$emailAddress = $_POST["emailAddress"];
        		$dateOfBirth = $_POST["dateOfBirth"];
+       		// For Date of Birth, only need the Year of birth.
        		$yearOfBirth = substr($dateOfBirth, -4);
+       		// Use regexes to accout for Upper/lowercase first letter for the first and last names of Johnny Noshow
        		$johnnyRegex = "/^[Jj]ohnny$/";
        		$noShowRegex = "/^[Nn]oshow$/";
 
+       		// If Applicant's name is Johnny Noshow, do not let him register. 
+       		// Otherwise, allow registration and display entered details for confirmation.
        		if (preg_match($johnnyRegex, $firstName) && preg_match($noShowRegex, $lastName)) {
        			echo "<h1>Registration Unsuccessful - No-show policy</h1>
 					<h2>Details: </h2>";
