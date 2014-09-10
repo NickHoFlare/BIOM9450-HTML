@@ -10,7 +10,7 @@
 <body>
 	<header>
 		<div class="logo-header">
-			<a href="./index.html"><img src="./assets/zombieBanner.png"></a>
+			<a href="./index.php"><img src="./assets/zombieBanner.png"></a>
 	    </div>
 	    <div class="navbar">
             <ul>
