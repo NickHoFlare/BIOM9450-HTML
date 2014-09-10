@@ -33,7 +33,7 @@ function  validLastName() {
 // Function checks if user-input date of birth is in a valid dd/mm/yyyy format.
 function validDOB() {
 	var dateOfBirth = document.getElementById('dateOfBirth');
-	var regex = /^(0[1-9]|[12][0-9]|3[01])\/[01][0-9]\/19[0-9][0-9]$/;
+	var regex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/19[0-9][0-9]$/;
 	// If the captured Date of Birth does not match the regex pattern, display an error message in red, and return false as an "error code".
 	if (!regex.test(dateOfBirth.value)) {
 		document.getElementById('dobError').innerHTML = 'The date of birth entered is not valid. Please enter a valid date in the format dd/mm/yyyy.';
