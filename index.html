@@ -4,70 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Anti-zombie Symposium</title>
 	<link rel="stylesheet" type="text/css" href="style.css" />
-	<script type="text/JavaScript">
-		// Function checks if text typed in a name field is in a valid name syntax
-		function  validFirstName() {
-			var firstName = document.getElementById('firstName');			
-			var regex = /^[a-zA-Z][a-zA-Z \']*$/;
-			if (!regex.test(firstName.value)) {
-				document.getElementById('firstNameError').innerHTML = 'The name entered is not valid. Do not use characters other than alphabets, single whitespace or apostrophes.';
-				document.getElementById('firstNameError').style.color = 'red';
-				return false;
-			} else {
-				document.getElementById('firstNameError').innerHTML = '';
-				return true;
-			}
-		}
-
-		function  validLastName() {
-			var lastName = document.getElementById('lastName');
-			var regex = /^[a-zA-Z][a-zA-Z \']*$/;
-			if (!regex.test(lastName.value)) {
-				document.getElementById('lastNameError').innerHTML = 'The name entered is not valid. Do not use characters other than alphabets, single whitespace or apostrophes.';
-				document.getElementById('lastNameError').style.color = 'red';
-				return false;
-			} else {
-				document.getElementById('lastNameError').innerHTML = '';
-				return true;
-			} 
-		}
-
-		function validDOB() {
-			var dateOfBirth = document.getElementById('dateOfBirth');
-			var regex = /^(0[1-9]|[12][0-9]|3[01])\/[01][0-9]\/19[0-9][0-9]$/;
-			if (!regex.test(dateOfBirth.value)) {
-				document.getElementById('dobError').innerHTML = 'The date of birth entered is not valid. Please enter a valid date in the format dd/mm/yyyy.';
-				document.getElementById('dobError').style.color = 'red';
-				return false;
-			} else {
-				document.getElementById('dobError').innerHTML = '';
-				return true;
-			} 
-		}
-
-		function validEmail() {
-			var email = document.getElementById('emailAddress');
-			var regex = /^[a-zA-Z0-9\.\_\-]+\@[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,4}$/;
-			if (!regex.test(email.value)) {
-				document.getElementById('emailError').innerHTML = 'The Email Address entered is not valid. Please enter a valid email address.';
-				document.getElementById('emailError').style.color = 'red';
-				return false;
-			} else {
-				document.getElementById('emailError').innerHTML = '';
-				return true;
-			} 
-		}
-
-		function validInfo() {
-			if (!(validFirstName() && validLastName() && validDOB() && validEmail())) {
-				alert("Please fix any errors in your provided information before we proceed with registration.");
-				return false;
-			} else {
-				return true;
-			}
-		}
-
-	</script>
+	<script src="./formVerification.js"></script>
 </head>
 
 <body>
