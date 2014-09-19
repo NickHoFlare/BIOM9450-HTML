@@ -3,3 +3,5 @@ report/
 examples/
 *.pdf
 *.zip
+*.mdb
+*.xml
