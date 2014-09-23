@@ -33,7 +33,10 @@ function  validLastName() {
 // Function checks if user-input date of birth is in a valid dd/mm/yyyy format.
 function validDOB() {
 	var dateOfBirth = document.getElementById('dateOfBirth');
-	var regex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/19[0-9][0-9]$/;
+	// OLD REGEX
+	//var regex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/19[0-9][0-9]$/;
+	// NEW REGEX (taken from 'http://stackoverflow.com/questions/5465375/javascript-date-regex-dd-mm-yyyy')
+	var regex = /^(((0[1-9]|[12]\d|3[01])\/(0[13578]|1[02])\/((19|[2-9]\d)\d{2}))|((0[1-9]|[12]\d|30)\/(0[13456789]|1[012])\/((19|[2-9]\d)\d{2}))|((0[1-9]|1\d|2[0-8])\/02\/((19|[2-9]\d)\d{2}))|(29\/02\/((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))))$/g;
 	// If the captured Date of Birth does not match the regex pattern, display an error message in red, and return false as an "error code".
 	if (!regex.test(dateOfBirth.value)) {
 		document.getElementById('dobError').innerHTML = 'The date of birth entered is not valid. Please enter a valid date in the format dd/mm/yyyy.';

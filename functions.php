@@ -8,8 +8,7 @@
 	// This function opens a connection to the database and checks if the 
 	// name and email of a provided applicant matches any of the banned entries of the database.
 	// Return True if Yes.
-	function isBanned($given, $last, $email) {
-		$conn = openConnection();	
+	function isBanned($given, $last, $email, $conn) {
 		$regQueries = "SELECT * FROM Registration";
 		$applicants = odbc_exec($conn,$regQueries);
 
@@ -33,8 +32,7 @@
 	// This function opens a connection to the database and checks if the 
 	// name and email of a provided applicant matches any of the unbanned entries of the database.
 	// Return True if Yes.
-	function alreadyExists($given, $last, $email) {
-		$conn = openConnection();	
+	function alreadyExists($given, $last, $email, $conn) {
 		$regQueries = "SELECT * FROM Registration";
 		$applicants = odbc_exec($conn,$regQueries);
 

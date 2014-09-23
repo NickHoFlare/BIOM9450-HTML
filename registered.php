@@ -36,12 +36,12 @@
 			echo "<br />";
 			
 			// Check the database if an entry for the applicant exists, and if he is banned. Display failure message if True.
-			if (isBanned($firstName, $lastName, $emailAddress)) {
+			if (isBanned($firstName, $lastName, $emailAddress, $conn)) {
 				echo "<h1>Registration Unsuccessful - No-show policy</h1>
 				<h2>Details: </h2>";
 				echo "<p>Dear Mr. ". $lastName .", last year you didn't turn up to present your talk. You cannot register this year!</p>";
 			// Check the database if an entry for the applicant exists, and he is not banned. Display failure message if True, as well as list of participants.
-			} elseif (alreadyExists($firstName, $lastName, $emailAddress)) {
+			} elseif (alreadyExists($firstName, $lastName, $emailAddress, $conn)) {
 				echo "<h1>You have already registered!</h1>
 				<h2>Details: </h2>";
 				echo "<p>Dear Mr. ". $lastName .", you have already registered for the symposium! You may only register once.</p>";
